@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="tema_1">
+
+    <div class="container flex">
+        <div class="container text-center">
+
+            <div class="d-flex justify-content-between theme-text">
+              <div>
+                  <p>
+                      calc
+                  </p>
+              </div>
+              <div class="d-flex justify-content-between color-blanco theme">
+                
+                <div class="me-3 d-flex align-items-center theme-text mt-2">
+                    THEME
+                </div>
+                
+                <div>
+                    1
+                    <div class="pe-1 radio-boton border-radius-top-izq border-radius-bottom-izq">   
+                        <input type="radio" name="radio_themes" onclick="radio_function()" id="blankRadio1" value="option1" checked>
+                    </div>
+                </div>
+                <div>
+                    2
+                    <div class="pe-1 radio-boton ">   
+                        <input type="radio" class="display-none" name="radio_themes" onclick="radio_function()" id="blankRadio2" value="option2">
+                    </div>
+                </div>
+                <div>
+                    3
+                    <div class="pe-1 border-radius-top-drch border-radius-bottom-drch radio-boton">   
+                        <input type="radio" class="display-none" name="radio_themes" onclick="radio_function()" id="blankRadio3" value="option3" >
+                    </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="pantalla_calculadora mt-3">
+                <p class="col me-3 ms-3" id="pantalla">0</p>
+            </div>
+
+            <form action="" class="p-4 mt-3 keypad">
+
+                <div class="row justify-content-between botones">
+                    <input type="button" class="col-2 boton numeros-signos" value="7" onclick="numeros('7')">
+                    <input type="button" class="col-2 boton numeros-signos" value="8" onclick="numeros('8')">
+                    <input type="button" class="col-2 boton numeros-signos" value="9" onclick="numeros('9')">
+                    <input type="button" class="col-2 boton boton-del-reset" value="DEL" onclick="retc()">
+                </div>
+                <div class="row justify-content-between mt-3 botones">
+                    <input type="button" class="col-2 boton numeros-signos" value="4" onclick="numeros('4')">
+                    <input type="button" class="col-2 boton numeros-signos" value="5" onclick="numeros('5')">
+                    <input type="button" class="col-2 boton numeros-signos" value="6" onclick="numeros('6')">
+                    <input type="button" class="col-2 boton numeros-signos" value="+" onclick="operador('+')">
+                </div>
+                <div class="row justify-content-between mt-3 botones">
+                    <input type="button" class="col-2 boton numeros-signos" value="1" onclick="numeros('1')">
+                    <input type="button" class="col-2 boton numeros-signos" value="2" onclick="numeros('2')">
+                    <input type="button" class="col-2 boton numeros-signos" value="3" onclick="numeros('3')">
+                    <input type="button" class="col-2 boton numeros-signos" value="-" onclick="operador('-')">
+                </div>
+                <div class="row justify-content-between mt-3 botones">
+                  <input type="button" class="col-2 boton numeros-signos" value="." onclick="numeros('.')">
+                    <input type="button" class="col-2 boton numeros-signos" value="0" onclick="numeros('0')">
+                    <input type="button" class="col-2 boton numeros-signos" value="/" onclick="operador('/')">
+                    <input type="button" class="col-2 boton numeros-signos" value="x" onclick="operador('*')">
+                </div>
+                <div class="row justify-content-between mt-3 botones">
+                  <input type="button" class="col-6 boton boton-del-reset" value="RESET" onclick="limpiar()">
+                  <input type="button" class="col-6 boton boton-igual" value="=" onclick="resultado()">
+              </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
