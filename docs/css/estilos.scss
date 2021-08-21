@@ -1,0 +1,295 @@
+:root {
+  // Tema 1
+  // fondos
+  --very-dark-desaturated-blue: hsl(222, 26%, 31%); //(main background)
+  --very-dark-desaturated-blue-keypad: hsl(223,31%,20%); //toggle background, keypad background
+  --very-dark-desaturated-blue-screen: hsl(224, 36%, 15%); //screen background
+  //teclas
+  --desaturated-dark-blue-key: hsl(225, 21%, 49%); //key background
+  --desaturated-dark-blue-key-shadows: hsl(224, 28%, 35%); //key shadow
+
+  --red-key: hsl(6, 63%, 50%); //key background, toggle
+  --dark-red: hsl(6, 70%, 34%); //key shadow
+
+  --light-grayish-orange: hsl(30, 25%, 89%); //key background
+  --grayish-orange: hsl(28, 16%, 65%); //key shadow
+  //texto
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --white: hsl(0, 0, 100%);
+
+  //Tema 2
+  //Fondo
+  --light-gray: hsl(0, 0%, 90%); // (main background)
+  --grayish-red: hsl(0, 5%, 81%); //(toggle background, keypad background)
+  --very-light-gray: hsl(0, 0%, 93%); //  (screen background)
+
+  // teclas
+  --dark-moderate-cyan: hsl(185, 42%, 37%); //(key background)
+  --very-dark-cyan: hsl(185, 58%, 25%); //(key shadow)
+
+  --orange : hsl(25, 98%, 40%); //(key background, toggle)
+  --dark-orange: hsl(25, 99%, 27%); // (key shadow)
+
+  --light-grayish-yellow: hsl(45, 7%, 89%); // (key background)
+  --dark-grayish-orange: hsl(35, 11%, 61%); //(key shadow)
+
+  // texto
+  --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+
+  // Tema 3
+  // fondo
+  --very-dark-violet-main: hsl(268, 75%, 9%); // (main background)
+  --very-dark-violet : hsl(268, 71%, 12%); //(toggle background, keypad background, screen background)
+
+  // teclas
+
+  --dark-violet: hsl(281, 89%, 26%); //(key background)
+  --vivid-magenta: hsl(285, 91%, 52%); // (key shadow)
+
+  --pure-cyan: hsl(176, 100%, 44%); //(key background, toggle)
+  --soft-cyan: hsl(177, 92%, 70%); //(key shadow)
+
+  --very-dark-violet-keys: hsl(268, 47%, 21%); // (key background)
+  --dark-magenta: hsl(290, 70%, 36%); //(key shadow)
+
+  //texto
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
+
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+* {
+  font-family: Spartan, sans-serif, Arial;
+}
+.row{
+  --bs-gutter-x: 0rem;
+}
+.col-2{
+  width: 22%;
+}
+.col-6{
+  width: 48%;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.radio-boton{
+  height: 20px;
+  padding: 3px;
+}
+.display-none{
+  // visibility: hidden;
+  opacity: 0;
+}
+.botones{
+  height: 40px;
+}
+.boton{
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+}
+.numeros-signos{
+  font-size: 20px;
+}
+
+.align-items-center{
+  align-items: center;
+}
+.theme{
+  font-size: 10px;
+}
+.border-radius-top-izq{
+  border-top-left-radius: 50%;
+}
+.border-radius-bottom-izq{
+  border-bottom-left-radius: 50%;
+}
+.border-radius-top-drch{
+  border-top-right-radius: 50%;
+}
+.border-radius-bottom-drch{
+  border-bottom-right-radius: 50%;
+}
+
+.container {
+  max-width: 400px;
+  padding: 0;
+
+  @media screen and (max-width: 400px){
+    margin: 0 20px;
+  }
+
+  .pantalla_calculadora {
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-content: center;
+    height: 90px;
+    display: flex;
+    align-items: center;
+  }
+
+  .keypad{
+    border-radius: 10px;
+  }
+
+  p {
+    text-align: right;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+}
+
+
+
+// ESTILOS TEMA 1
+
+.tema_1{
+  background-color: var(--very-dark-desaturated-blue);
+  //calc
+  .theme-text{
+    color: #fff;
+  }
+  .radio-boton{
+    background-color: var(--very-dark-desaturated-blue-keypad);
+  }
+  //pantalla
+  .pantalla_calculadora {
+    background-color: var(--very-dark-desaturated-blue-screen);
+    color: white;
+  }
+  //teclado
+  .keypad{
+    background-color: var(--very-dark-desaturated-blue-keypad);
+  }
+  // botones
+  .numeros-signos{
+    color: var(--very-dark-grayish-blue);
+    background-color: var(--light-grayish-orange);
+    -webkit-box-shadow: 0px 3px 0px 0px var(--grayish-orange); 
+    box-shadow: 0px 3px 0px 0px var(--grayish-orange);
+  }
+  .boton-del-reset{
+    background-color: var(--desaturated-dark-blue-key);
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 0px 0px var(--desaturated-dark-blue-key-shadows); 
+    box-shadow: 0px 3px 0px 0px var(--desaturated-dark-blue-key-shadows);
+  }
+  .boton-igual{
+    background-color: var(--red-key);
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 0px 0px var(--dark-red); 
+    box-shadow: 0px 3px 0px 0px var(--dark-red);
+  }
+}
+
+// ESTILOS TEMA 2
+
+.tema_2{
+
+  background-color: var(--light-gray);
+  //calc
+  .theme-text{
+    color: var(--very-dark-grayish-yellow);
+  }
+  .radio-boton{
+    background-color: var(--grayish-red);
+  }
+  //pantalla
+  .pantalla_calculadora {
+    background-color: var(--very-light-gray);
+    color: var(--very-dark-grayish-yellow);
+  }
+  //teclado
+  .keypad{
+    background-color: var(--grayish-red);
+  }
+  // botones
+  .numeros-signos{
+    color: var(--very-dark-grayish-blue);
+    background-color: var(--light-grayish-yellow);
+    -webkit-box-shadow: 0px 3px 0px 0px var(--dark-grayish-orange); 
+    box-shadow: 0px 3px 0px 0px var(--dark-grayish-orange);
+  }
+  .boton-del-reset{
+    background-color: var(--dark-moderate-cyan);
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 0px 0px var(--very-dark-cyan); 
+    box-shadow: 0px 3px 0px 0px var(--very-dark-cyan);
+  }
+  .boton-igual{
+    background-color: var(--orange);
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 0px 0px var(--dark-orange); 
+    box-shadow: 0px 3px 0px 0px var(--dark-orange);
+  }
+
+}
+
+.tema_3{
+
+  // teclas
+
+  --dark-violet: hsl(281, 89%, 26%); //(key background)
+  --vivid-magenta: hsl(285, 91%, 52%); // (key shadow)
+
+  --pure-cyan: hsl(176, 100%, 44%); //(key background, toggle)
+  --soft-cyan: hsl(177, 92%, 70%); //(key shadow)
+
+  --very-dark-violet-keys: hsl(268, 47%, 21%); // (key background)
+  --dark-magenta: hsl(290, 70%, 36%); //(key shadow)
+
+  //texto
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
+  background-color: var(--very-dark-violet-main);
+  //calc
+  .theme-text{
+    color: var(--light-yellow);
+  }
+  .radio-boton{
+    background-color: var(--very-dark-violet);
+  }
+  //pantalla
+  .pantalla_calculadora {
+    background-color: var(--very-dark-violet);
+    color: var(--light-yellow);
+  }
+  //teclado
+  .keypad{
+    background-color: var(--very-dark-violet);
+  }
+  // botones
+  .numeros-signos{
+    color: var(--light-yellow);
+    background-color: var(--very-dark-violet-keys);
+    -webkit-box-shadow: 0px 3px 0px 0px var(--dark-magenta); 
+    box-shadow: 0px 3px 0px 0px var(--dark-magenta);
+  }
+  .boton-del-reset{
+    background-color: var(--dark-violet);
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 0px 0px var(--vivid-magenta); 
+    box-shadow: 0px 3px 0px 0px var(--vivid-magenta);
+  }
+  .boton-igual{
+    background-color: var(--pure-cyan);
+    color: var(--very-dark-blue);
+    -webkit-box-shadow: 0px 3px 0px 0px var(--soft-cyan); 
+    box-shadow: 0px 3px 0px 0px var(--soft-cyan);
+  }
+  
+}
