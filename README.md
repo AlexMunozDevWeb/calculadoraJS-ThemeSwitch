@@ -1,5 +1,5 @@
-# view proyect ->calculadoraJS-ThemeSwitch
+# Ver proyecto (calculadoraJS-ThemeSwitch)
 https://alexmunozdevweb.github.io/calculadoraJS-ThemeSwitch/
 
-# Image
+# Imagen
 <img src="temas.png">
